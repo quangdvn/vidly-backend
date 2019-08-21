@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const cors = require('cors');
 require('dotenv').config();
 
-const mongoDB = require('./configs/keys').MongoURL
+const mongoDB = require('./configs/keys').MongoURL;
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 //* API routes
